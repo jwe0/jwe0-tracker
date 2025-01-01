@@ -75,7 +75,7 @@ function run(req) {
 
 app.get('/image', (req, res) => {
     run(req);
-    res.sendFile("https://bejewelled-daifuku-ccf3ad.netlify.app/public/1x1.png");
+    res.redirect('https://http.cat/404');
 });
 
 module.exports.handler = serverless(app);
