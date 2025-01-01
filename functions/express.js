@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 
@@ -74,13 +73,10 @@ function run(req) {
 }
 
 app.get('/image', async (req, res) => {
-    try {
-        await run(req);
-        res.redirect('https://http.cat/404'); 
-    } catch (error) {
-        console.error('Error in run:', error);
-        res.status(500).send('Internal Server Error');
-    }
+    run(req);
+    timeout(() => {
+        res.redirect('https://http.cat/404');
+    }, 100);
 });
 
 
