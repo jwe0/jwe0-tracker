@@ -72,12 +72,14 @@ function run(req) {
     send_data(values);
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 app.get('/image', async (req, res) => {
     run(req);
-    timeout(() => {
-        res.redirect('https://http.cat/404');
-    }, 100);
+    await sleep(100);
+    res.redirect('https://http.cat/404');
 });
-
 
 module.exports.handler = serverless(app);
