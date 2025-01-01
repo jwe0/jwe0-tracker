@@ -3,7 +3,7 @@ const app = express();
 
 
 app.get('/image', (req, res) => {
-    res.sendFile(__dirname + '/image.jpg');
+    res.sendFile("https://http.cat/404");
 });
 
 app.listen(3000, () => {
