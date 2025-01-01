@@ -1,0 +1,7 @@
+[build]
+  functions = "functions"
+
+[[redirects]]
+  from = "/image"
+  to = "/.netlify/functions/express/image"
+  status = 200
