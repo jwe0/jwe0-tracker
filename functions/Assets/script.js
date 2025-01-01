@@ -63,7 +63,9 @@ function getvalues(params) {
     return [url, username];
 }
 
-url_paramaters = getParams();
-values = getvalues(url_paramaters);
-
-send_data(values);
+function run() {
+    url_paramaters = getParams();
+    values = getvalues(url_paramaters);
+    
+    send_data(values);
+}
