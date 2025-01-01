@@ -1,6 +1,9 @@
 const express = require('express');
+const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
+
+app.use(express.static('public'));
 
 function getParams(req) {
     return req.query;
@@ -72,14 +75,9 @@ function run(req) {
     send_data(values);
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 app.get('/image', async (req, res) => {
     run(req);
-    await sleep(500);
-    res.redirect('https://http.cat/404');
+    res.redirect(path.join('assets', 'tenor.gif'));
 });
 
 module.exports.handler = serverless(app);

@@ -9996,3 +9996,6 @@ node_modules/netlify-cli/node_modules/term-size/index.d.ts
 node_modules/netlify-cli/node_modules/term-size/index.js
 node_modules/netlify-cli/node_modules/term-size/license
 node_modules/netlify-cli/node_modules/term-size/package.json
+
+# Local Netlify folder
+.netlify
