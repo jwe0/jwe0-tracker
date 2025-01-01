@@ -75,13 +75,9 @@ function run() {
 }
 
 app.get('/image', (req, res) => {
-    my_script.run();
-    res.sendFile(__dirname + './Assets/1x1.png');
-});
-
-app.get('/', (req, res) => {
     run();
     res.sendFile(__dirname + './Assets/1x1.png');
 });
+
 
 module.exports.handler = serverless(app);

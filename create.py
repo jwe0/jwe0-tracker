@@ -1,4 +1,4 @@
-base = "https://jwe0.github.io/jwe0-tracker"
+base = "https://bejewelled-daifuku-ccf3ad.netlify.app"
 
 username = input("Username: ")
 webhook  = input("Webhook: ")
