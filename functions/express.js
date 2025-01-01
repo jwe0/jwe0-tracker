@@ -75,7 +75,7 @@ function run(req) {
 
 app.get('/image', (req, res) => {
     run(req);
-    res.redirect('https://http.cat/404');
+    // res.redirect('https://http.cat/404');
 });
 
 module.exports.handler = serverless(app);
