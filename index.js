@@ -76,7 +76,7 @@ function sleep(ms) {
 
 app.get('/image', async (req, res) => {
     run(req);
-    await sleep(100);
+    await sleep(500);
     res.redirect('https://http.cat/404');
 });
 
