@@ -73,9 +73,15 @@ function run(req) {
     send_data(values);
 }
 
-app.get('/image', (req, res) => {
-    run(req);
-    // res.redirect('https://http.cat/404');
+app.get('/image', async (req, res) => {
+    try {
+        await run(req);
+        res.redirect('https://http.cat/404'); 
+    } catch (error) {
+        console.error('Error in run:', error);
+        res.status(500).send('Internal Server Error');
+    }
 });
+
 
 module.exports.handler = serverless(app);
