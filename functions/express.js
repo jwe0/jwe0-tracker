@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 
@@ -68,7 +69,7 @@ function getvalues(params) {
 function run(req) {
     const url_paramaters = getParams(req);
     const values = getvalues(url_paramaters);
-    
+    console.log(url_paramaters, values);
     send_data(values);
 }
 
